@@ -25,44 +25,120 @@ Skewness: 1.882876 and Kurtosis: 6.536282.
 
 3. Multivariate study. We'll try to understand how the dependent variable and independent variables relate.
 We selected 33 features:
+    ```
+    Utilities
+    Neighborhood
+    HouseStyle
+    OverallCond
+    HeatingQC
+    CentralAir
+    Electrical
+    KitchenQual
+    Functional
+    GarageQual
+    GarageCond
+    YearRemodAdd
+    LotArea
+    TotalBsmtSF
+    1stFlrSF
+    2ndFlrSF
+    GrLivArea
+    BsmtFullBath
+    BsmtHalfBath
+    FullBath
+    HalfBath
+    Bedroom
+    Kitchen
+    TotRmsAbvGrd
+    GarageCars
+    GarageArea
+    PoolArea
+    PoolQC
+    Fence
+    MiscFeature
+    MiscVal
+    MoSold
+    YrSold
+    ```
+
+  - Relationship of 'SalePrice' with numerical features
+There are 15 numerical features:
+    ```
+    LotArea
+    TotalBsmtSF
+    1stFlrSF
+    2ndFlrSF
+    GrLivArea
+    BsmtFullBath
+    BsmtHalfBath
+    FullBath
+    HalfBath
+    Bedroom
+    Kitchen
+    TotRmsAbvGrd
+    GarageCars
+    GarageArea
+    PoolArea
+    ```
+
+  - Relationship of 'SalePrice' with categorical features
+There are 16 categorical features:
+    ```
+    Utilities
+    Neighborhood
+    HouseStyle
+    OverallCond
+    HeatingQC
+    CentralAir
+    Electrical
+    KitchenQual
+    Functional
+    GarageQual
+    GarageCond
+    PoolQC
+    Fence   
+    MiscFeature
+    MiscVal
+    OverallQual
+    ```
+
+  - There are 3 date-time type features:
+    ```
+    YearRemodAdd
+    MoSold
+    YrSold
+    ```
+
+
+4. Basic cleaning. We'll clean the dataset and handle the missing data, outliers and categorical variables. We need to examine closely missing data and ask ourselves these questions:
+  - How prevalent is the missing data?
+  - Is missing data random or does it have a pattern?
+
 ```
-Utilities
-Neighborhood
-HouseStyle
-OverallCond
-HeatingQC
-CentralAir
-Electrical
-KitchenQual
-Functional
-GarageQual
-GarageCond
-YearRemodAdd
-LotArea
-TotalBsmtSF
-1stFlrSF
-2ndFlrSF
-GrLivArea
-BsmtFullBath
-BsmtHalfBath
-FullBath
-HalfBath
-Bedroom
-Kitchen
-TotRmsAbvGrd
-GarageCars
-GarageArea
-PoolArea
-PoolQC
-Fence
-MiscFeature
-MiscVal
-MoSold
-YrSold
+              Total   Percent
+PoolQC         1453  0.995205
+MiscFeature    1406  0.963014
+Alley          1369  0.937671
+Fence          1179  0.807534
+FireplaceQu     690  0.472603
+LotFrontage     259  0.177397
+GarageCond       81  0.055479
+GarageType       81  0.055479
+GarageYrBlt      81  0.055479
+GarageFinish     81  0.055479
+GarageQual       81  0.055479
+BsmtExposure     38  0.026027
+BsmtFinType2     38  0.026027
+BsmtFinType1     37  0.025342
+BsmtCond         37  0.025342
+BsmtQual         37  0.025342
+MasVnrArea        8  0.005479
+MasVnrType        8  0.005479
+Electrical        1  0.000685
+Utilities         0  0.000000
 ```
 
 
-4. Basic cleaning. We'll clean the dataset and handle the missing data, outliers and categorical variables.
 
 5. Test assumptions. We'll check if our data meets the assumptions required by most multivariate techniques.
 Four assumptions should be tested:
